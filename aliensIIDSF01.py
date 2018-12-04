@@ -1,4 +1,4 @@
-#Add "While Loop" To Question One
+#Add "While Loop" To Question Two
 
 #Identify variables
 landed = int()
@@ -25,19 +25,42 @@ while aliens == False:
        
        if landed > 0:
            print("Oh, and tell us...")
-           print()
            aliens = True
-           #aliens is now TRUE because he user inputed a positive whole number
-
+           #aliens is TRUE becayse the user used a positive integer
+           #This allows the user to break out the loop and go to Q2
        else:
            print("Please input a positive integer")
            #aliens is NOT true because the user did not input a good number
+           #User will stay in loop, until a good number is entered
             
     except ValueError:
            print("Seriously? Input a positive WHOLE Number")
            #the user did not put a number and/or a whole number, so aliens is NOT true
+           #User will stay in loop, until a good number is entered
 
+#Q2
+while time == False:
+    try:
+        weeks = int(input ("How many weeks did they stay? "))
 
+        if weeks > 0:
+            print("Let me calculate real quick")
+            time = True
+            #time is TRUE becayse the user used a positive integer
+            #This allows the user to break out the loop and allows them to see the calculations
+            
+        else:
+            print("Please input a positive integer")
+            #time is NOT true because the user did not input a good number
+            #User will stay in loop, until a good number is entered
+
+    except ValueError:
+         print("Seriously? Input a positive WHOLE Number")
+         #the user did not put a number and/or a whole number, so time is NOT true
+         #User will stay in loop, until a good number is entered
+
+    
+        
 #Calculations
 for i in range(weeks):
     print("There are ", str(landed * 2 ** (i+1)), "aliens at the end of", str(i+1),
